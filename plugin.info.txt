@@ -1,0 +1,7 @@
+base   sugar
+author damien clochard
+email  damien@taadeem.net
+date   2010-08-10
+name   sugar plugin
+desc   providing hyperlink references to SugarCRM
+url    http://github.com/daamien/dokuwiki-plugin-sugar
