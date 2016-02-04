@@ -35,7 +35,7 @@ class syntax_plugin_sugar extends DokuWiki_Syntax_Plugin {
         $this->Lexer->addSpecialPattern('~~SugarContact:[-0-9a-f]+~~', $mode, 'plugin_sugar');    
     }
 
-    function handle($match, $state, $pos, &$handler){
+    function handle($match, $state, $pos, Doku_Handler $handler){
         $data = array();
         // trim the ~~ characters
         $match_clean = trim($match, "~");
@@ -71,7 +71,7 @@ class syntax_plugin_sugar extends DokuWiki_Syntax_Plugin {
         return $data;
     }
 
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
         if ( $mode == 'xhtml' ) {
 		$renderer->externallink( $data[0],$data[1]);
                 return true;
